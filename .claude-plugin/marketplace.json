@@ -1,0 +1,21 @@
+{
+  "name": "codex-plankeeper-for-cc",
+  "owner": {
+    "name": "Ryan"
+  },
+  "metadata": {
+    "description": "Codex-judged plan gate for Claude Code's plan mode.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "plankeeper",
+      "description": "Plan quality gate: Codex reviews every plan against the real codebase before the user is asked to approve it.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Ryan"
+      },
+      "source": "./"
+    }
+  ]
+}

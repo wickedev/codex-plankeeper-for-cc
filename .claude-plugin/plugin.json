@@ -1,0 +1,8 @@
+{
+  "name": "plankeeper",
+  "version": "0.1.0",
+  "description": "Plankeeper for plan mode: every plan Claude tries to present is first reviewed by Codex against the actual codebase. Deficient plans are sent back with concrete fixes; only an independently approved plan reaches the user's approval dialog.",
+  "author": {
+    "name": "Ryan"
+  }
+}

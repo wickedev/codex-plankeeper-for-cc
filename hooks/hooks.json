@@ -1,0 +1,18 @@
+{
+  "description": "Codex plan gate: reviews every ExitPlanMode plan against the actual codebase and sends deficient plans back for revision before the user is asked to approve them.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "ExitPlanMode",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/scripts/plan-gate-hook.mjs\"",
+            "timeout": 900,
+            "statusMessage": "Codex is reviewing the plan…"
+          }
+        ]
+      }
+    ]
+  }
+}

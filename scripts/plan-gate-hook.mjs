@@ -15,8 +15,8 @@
 // user with a stderr note. A broken judge can never hide a plan from the user.
 
 import fs from "node:fs";
+import { readStdinSync } from "./lib/stdin.mjs";
 import path from "node:path";
-import process from "node:process";
 import { fileURLToPath } from "node:url";
 
 import { codexAvailable, runCodexJudge } from "./lib/codex.mjs";
@@ -41,7 +41,7 @@ const JUDGE_TIMEOUT_MS = 10 * 60 * 1000;
 const JUDGE_ERROR_CAP = 3;
 
 function readHookInput() {
-  const raw = fs.readFileSync(0, "utf8").trim();
+  const raw = readStdinSync().trim();
   // Opt-in capture of the raw PreToolUse payload; the field set is internal to
   // Claude Code, and this is how you check what a given version actually sends.
   const debugPath = process.env.PLANKEEPER_DEBUG_INPUT;

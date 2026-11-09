@@ -1,7 +1,6 @@
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
-import process from "node:process";
 
 const STATE_ROOT = path.join(os.homedir(), ".claude", "plankeeper");
 const SESSIONS_DIR = path.join(STATE_ROOT, "sessions");
